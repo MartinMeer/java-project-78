@@ -16,7 +16,7 @@ repositories {
 }
 
 application {
-    mainClass.set("hexlet.code.App")
+    mainClass.set("hexlet.code.Validator")
 }
 
 dependencies {
