@@ -8,9 +8,4 @@ public class MapSchema extends BaseSchema {
 
     public void shape(Map<String, BaseSchema<String>> schemas) {
     }
-
-    @Override
-    public boolean isValid(String input) {
-        return false;
-    }
 }

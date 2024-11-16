@@ -18,10 +18,9 @@ public abstract class BaseSchema<T> {
 
 
 
-    public BaseSchema<String> required() {
-        schema = (T) new Object();
-        return null;
+    public boolean isValid(T input) {
+        return predicateMap.values()
+                .stream()
+                .allMatch(e -> e.test(input));
     }
-
-    public abstract boolean isValid(String input);
 }

@@ -1,6 +1,6 @@
 package hexlet.code.schemas;
 
-public class NumberSchema extends BaseSchema {
+public class NumberSchema {
     public BaseSchema<Object> positive() {
         return null;
     }
