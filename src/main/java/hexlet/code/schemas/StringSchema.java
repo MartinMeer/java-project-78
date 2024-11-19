@@ -2,7 +2,7 @@ package hexlet.code.schemas;
 
 import java.util.HashMap;
 
-public class StringSchema extends BaseSchema<String>{
+public final class StringSchema extends BaseSchema<String>{
 
     public StringSchema() {
         predicateMap = new HashMap<>();
