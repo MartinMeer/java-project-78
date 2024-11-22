@@ -6,11 +6,11 @@ import java.util.Map;
 public final class MapSchemaT<T> extends BaseSchema<Map<String, T >> {
 
     public MapSchemaT() {
-        predicateMap = new HashMap<>();
+        predicatesMap = new HashMap<>();
     }
 
     public MapSchemaT<?> sizeof(int size) {
-        predicateMap.put("isSize", map -> map.size() == size);
+        predicatesMap.put("isSize", map -> map.size() == size);
         return this;
     }
 

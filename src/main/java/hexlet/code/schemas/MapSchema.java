@@ -3,18 +3,21 @@ package hexlet.code.schemas;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class MapSchema extends BaseSchema<Map<?, ? >> {
+public final class MapSchema extends BaseSchema<Map<String, ? extends BaseSchema<?>>> {
 
     public MapSchema() {
-        predicateMap = new HashMap<>();
+        predicatesMap = new HashMap<>();
     }
 
     public MapSchema sizeof(int size) {
-        predicateMap.put("isSize", map -> map.size() == size);
+        predicatesMap.put("isSize", map -> map.size() == size);
         return this;
     }
 
-    public void shape(Map<?, ?> schemas) {
+    public MapSchema shape(Map<String, ? extends BaseSchema<?>> schemas) {
 
+
+        return this;
     }
+
 }

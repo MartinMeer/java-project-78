@@ -7,20 +7,27 @@ import java.util.function.Predicate;
 
 public class BaseSchema <T> {
 
-    protected Map<String, Predicate<T>> predicateMap;
+    protected Map<String, Predicate<T>> predicatesMap;
 
     public BaseSchema() {
-        predicateMap = new HashMap<>();
+        predicatesMap = new HashMap<>();
     }
 
     public BaseSchema<T> required() {
-        predicateMap.put("required", Objects::nonNull);
+        predicatesMap.put("required", Objects::nonNull);
         return this;
     }
 
+
+    private Predicate validate;
+    private Predicate val(T input) {
+        return e -> validate.test(input);
+    }
+
+
     public boolean isValid(T input) {
-        return predicateMap.values()
+        return predicatesMap.values()
                 .stream()
-                .allMatch(e -> e.test(input));
+                .allMatch(validate);
     }
 }

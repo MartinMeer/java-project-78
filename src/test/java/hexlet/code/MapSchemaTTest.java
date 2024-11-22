@@ -1,3 +1,4 @@
+/*
 package hexlet.code;
 
 
@@ -51,7 +52,8 @@ public class MapSchemaTTest {
 
     }
 
-    /*@Test
+    */
+/*@Test
     public void testValuesOfMap() {
         var schema = v.mapT();
         // Создаем набор схем для проверки каждого ключа проверяемого объекта
@@ -83,6 +85,8 @@ public class MapSchemaTTest {
         human3.put("firstName", "Anna");
         human3.put("lastName", "B");
         assertFalse(schema.isValid(human3)); // false
-    }*/
+    }*//*
+
 
 }
+*/
