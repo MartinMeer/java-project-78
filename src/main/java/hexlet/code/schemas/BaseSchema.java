@@ -19,15 +19,9 @@ public class BaseSchema <T> {
     }
 
 
-    private Predicate validate;
-    private Predicate val(T input) {
-        return e -> validate.test(input);
-    }
-
-
     public boolean isValid(T input) {
         return predicatesMap.values()
                 .stream()
-                .allMatch(validate);
+                .allMatch(e -> e.test(input));
     }
 }
