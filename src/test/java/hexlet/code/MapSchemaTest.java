@@ -1,6 +1,4 @@
-/*
 package hexlet.code;
-
 
 import hexlet.code.schemas.BaseSchema;
 import org.junit.jupiter.api.BeforeAll;
@@ -86,6 +84,4 @@ public class MapSchemaTest {
         human3.put("lastName", "B");
         assertFalse(schema.isValid(human3)); // false
     }
-
 }
-*/
