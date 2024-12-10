@@ -2,6 +2,7 @@ package hexlet.code.schemas;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 
 public final class MapSchema extends BaseSchema<Map<String, ?>> {
@@ -12,6 +13,11 @@ public final class MapSchema extends BaseSchema<Map<String, ?>> {
 
     public MapSchema sizeof(int size) {
         predicatesMap.put("isSize", map -> map.size() == size);
+        return this;
+    }
+
+    public MapSchema required() {
+        predicatesMap.put("isRequired", Objects::nonNull);
         return this;
     }
 
