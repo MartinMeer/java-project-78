@@ -15,12 +15,12 @@ public final class StringSchema extends BaseSchema<String>{
     }
 
     public StringSchema minLength(int length) {
-        predicatesMap.put("minLength", str -> str.length() >= length);
+        predicatesMap.put("minLength", str -> str != null && str.length() >= length);
         return this;
     }
 
     public StringSchema contains(String contain) {
-        predicatesMap.put("contain", str -> str.contains(contain));
+        predicatesMap.put("contain", str -> str != null && str.contains(contain));
         return this;
     }
 

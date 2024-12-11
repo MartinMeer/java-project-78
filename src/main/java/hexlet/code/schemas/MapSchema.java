@@ -16,11 +16,6 @@ public final class MapSchema extends BaseSchema<Map<String, ?>> {
         return this;
     }
 
-    public MapSchema required() {
-        predicatesMap.put("isRequired", Objects::nonNull);
-        return this;
-    }
-
     public <T> MapSchema shape(Map<String, BaseSchema<T>> schemas) {
         predicatesMap.put("isTrue", map -> schemas.entrySet().stream().allMatch(e -> {
             var v = map.get(e.getKey());
