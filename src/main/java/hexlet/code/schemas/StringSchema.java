@@ -2,7 +2,7 @@ package hexlet.code.schemas;
 
 import java.util.HashMap;
 
-public final class StringSchema extends BaseSchema<String>{
+public final class StringSchema extends BaseSchema<String> {
 
     public StringSchema() {
         predicatesMap = new HashMap<>();
@@ -23,10 +23,4 @@ public final class StringSchema extends BaseSchema<String>{
         predicatesMap.put("contain", str -> str != null && str.contains(contain));
         return this;
     }
-
-
-
-
-
-
 }
